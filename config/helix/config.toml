@@ -1,0 +1,149 @@
+theme = "base16_default"
+
+[editor]
+# shell = ["nu", "-c"]
+bufferline = "always"
+completion-replace = true
+completion-timeout = 150
+completion-trigger-len = 1
+cursorline = true
+end-of-line-diagnostics = "error"
+true-color = true
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 3000
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "warning"
+
+[editor.lsp]
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+center = ["file-modification-indicator", "file-base-name"]
+left = ["spinner", "spacer", "mode", "spacer", "diagnostics"]
+right = ["version-control", "position", "file-encoding", "spacer", "file-type"]
+
+[keys.insert]
+# buffer movement
+"A-," = ":buffer-previous"
+"A-." = ":buffer-next"
+
+"C-'" = "goto_word"
+"C-/" = "toggle_comments"
+"C-;" = "code_action"
+"C-[" = "unindent"
+"C-]" = "indent"
+
+# delete
+A-backspace = "delete_word_forward"
+C-backspace = "delete_word_backward"
+S-backspace = "delete_selection"
+C-l = "delete_char_forward"
+
+# line 
+S-ret = "open_below"
+C-ret = "open_above"
+
+C-d = "no_op"
+
+C-c = "yank_to_clipboard"
+C-v = "paste_clipboard_before"
+C-u = "redo"
+C-z = "undo"
+C-s = ":w"
+
+C-a = "goto_first_nonwhitespace"
+C-b = "move_char_left"
+C-f = "move_char_right"
+C-e = "goto_line_end_newline"
+C-n = "move_line_down"
+C-p = "move_line_up"
+A-b = "move_prev_word_end"
+A-f = ["move_next_word_end", "extend_char_right"]
+
+C-left = "move_prev_sub_word_end"
+C-down = "scroll_down"
+C-right = ["move_next_sub_word_end", "extend_char_right"]
+C-up = "scroll_up"
+
+S-left = "extend_char_left"
+S-down = "extend_line_down"
+S-right = "extend_char_right"
+S-up = "extend_line_up"
+
+
+[keys.normal]
+# TODO: pass the shell expandation when it support.
+# A-y = ":sh nu -e 'reveal_in_yazi %{buffer_name}; exit;'"
+
+"A-," = ":buffer-previous"
+"A-." = ":buffer-next"
+
+"A-`" = "no_op"
+"C-'" = "goto_word"
+"C-/" = "toggle_comments"
+"C-;" = "code_action"
+
+"C-`" = "switch_to_uppercase"
+"S-`" = "switch_to_lowercase"
+
+"C-[" = "unindent"
+"C-]" = "indent"
+
+C-s = ":w"
+C-g = "goto_line"
+
+# scroll
+C-down = "scroll_down"
+C-up = "scroll_up"
+
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+
+# yank & paste
+C-c = "yank_to_clipboard"
+C-v = "paste_clipboard_after"
+d = ["yank_to_clipboard", "delete_selection"]
+p = "paste_clipboard_after"
+y = "yank_to_clipboard"
+P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+
+[keys.normal.space]
+e = ":quit!"
+q = ":buffer-close!"
+
+[keys.select]
+C-c = "yank_to_clipboard"
+C-v = "paste_clipboard_before"
+P = "paste_clipboard_before"
+R = "replace_selections_with_clipboard"
+y = "yank_to_clipboard"
+d = ["yank_to_clipboard", "delete_selection"]
+
+S-tab = "extend_parent_node_start"
+tab = "extend_parent_node_end"
+
+[keys.normal."]"]
+"]" = [":append-output echo ' '", "normal_mode"]
+
+[keys.normal."["]
+"[" = [":insert-output echo ' '", "normal_mode"]
+
+[keys.insert.j]
+k = "normal_mode"
+j= [":insert-output echo 'j'", "move_char_right"]
