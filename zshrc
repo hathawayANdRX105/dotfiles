@@ -106,12 +106,15 @@ export EDITOR='helix'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias suhx="sudo hx -config ~/.config/helix/config.toml"
+alias suhx="sudo hx --config ~/.config/helix/config.toml"
 alias cat=bat
 alias cd=z
 
 alias l="eza --icons  -a --group-directories-first -1"
-alias la="eza --icons  -a --group-directories-first -1 --no-user --long"
-alias lat="eza --icons --tree --group-directories-first"
+alias ll="eza --icons  -a --group-directories-first -1 --no-user --long"
+alias lt="eza --icons --tree --group-directories-first"
+
+# replace rm
+alias rm="mv -t '/home/hathaway/模板'"
 
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
