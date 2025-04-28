@@ -10,5 +10,4 @@
       glob: true
       # force: true
       path: config/**
-    ~/.zshrc:
     ~/.gitconfig:

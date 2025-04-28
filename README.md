@@ -1,8 +1,6 @@
 
 # shell
-zsh
-zsh-autosuggestions
-zsh-syntax-highlighting
+nushell
 starship
 
 # cmdline
@@ -10,6 +8,12 @@ dotbot
 eza
 zoxide
 bat
+
+# tool
+wl-clipboard
+
+# theme
+WhiteSur-gtk-theme
 
 # teriminal
 kitty
