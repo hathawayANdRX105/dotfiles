@@ -4,10 +4,11 @@ nushell
 starship
 
 # cmdline
-dotbot
-eza
-zoxide
-bat
+dotbot  # dotfile management
+eza     # ls replacement
+zoxide  # cd replacement
+bat     # cat replacement
+xdotool # window control
 
 # tool
 wl-clipboard
