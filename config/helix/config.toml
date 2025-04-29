@@ -60,8 +60,8 @@ C-ret = "open_above"
 
 C-d = "no_op"
 
-C-c = "yank_to_clipboard"
-C-v = "paste_clipboard_before"
+C-c = "yank_to_primary_clipboard"
+C-v = "paste_primary_clipboard_before"
 C-u = "redo"
 C-z = "undo"
 C-s = ":w"
@@ -88,7 +88,7 @@ S-up = "extend_line_up"
 
 [keys.normal]
 # TODO: pass the shell expandation when it support.
-# A-y = ":sh nu -e 'reveal_in_yazi %{buffer_name}; exit;'"
+A-y = ":sh %{buffer_name} o> ~/tmp.txt"
 
 "A-," = ":buffer-previous"
 "A-." = ":buffer-next"
@@ -115,25 +115,25 @@ tab = "move_parent_node_end"
 S-tab = "move_parent_node_start"
 
 # yank & paste
-C-c = "yank_to_clipboard"
-C-v = "paste_clipboard_after"
-d = ["yank_to_clipboard", "delete_selection"]
-p = "paste_clipboard_after"
-y = "yank_to_clipboard"
-P = "paste_clipboard_before"
-R = "replace_selections_with_clipboard"
+C-c = "yank_to_primary_clipboard"
+C-v = "paste_primary_clipboard_after"
+d = ["yank_to_primary_clipboard", "delete_selection"]
+p = "paste_primary_clipboard_after"
+y = "yank_to_primary_clipboard"
+P = "paste_primary_clipboard_before"
+R = "replace_selections_with_primary_clipboard"
 
 [keys.normal.space]
 e = ":quit!"
 q = ":buffer-close!"
 
 [keys.select]
-C-c = "yank_to_clipboard"
-C-v = "paste_clipboard_before"
-P = "paste_clipboard_before"
-R = "replace_selections_with_clipboard"
-y = "yank_to_clipboard"
-d = ["yank_to_clipboard", "delete_selection"]
+C-c = "yank_to_primary_clipboard"
+C-v = "paste_primary_clipboard_before"
+P = "paste_primary_clipboard_before"
+R = "replace_selections_with_primary_clipboard"
+y = "yank_to_primary_clipboard"
+d = ["yank_to_primary_clipboard", "delete_selection"]
 
 S-tab = "extend_parent_node_start"
 tab = "extend_parent_node_end"

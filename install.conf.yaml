@@ -8,6 +8,8 @@
 - link:
     ~/.config: 
       glob: true
-      # force: true
       path: config/**
     ~/.gitconfig:
+    ~/Pictures/wallpaper:
+      glob: true
+      path: wallpaper/**

@@ -1,3 +1,9 @@
+# desktop management
+hyprland
+
+# input method
+fcitx5
+fcitx5-chinese-addons
 
 # shell
 nushell
@@ -21,3 +27,6 @@ kitty
 
 # app
 obsidian
+
+# proxy
+nekoray appimage
