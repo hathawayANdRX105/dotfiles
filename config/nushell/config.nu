@@ -11,10 +11,13 @@ alias suhx = sudo hx --config ~/.config/helix/config.toml
 alias cat = bat
 alias cd = z
 
+# ls
 alias l = eza --icons  -a --group-directories-first -1
 alias ll = eza --icons  -a --group-directories-first -1 --no-user --long
 alias lt = eza --icons --tree --group-directories-first
 
-# replace rm
-alias rm = mv '/home/hathaway/模板'
+# move file to 'trash' 
+alias rm = rm -t
+
+# job
 alias fg = do -i { job unfreeze }
