@@ -1,5 +1,9 @@
 # desktop management
 hyprland
+hyprpaper
+hypridle
+hyprlock
+
 
 # input method
 fcitx5
@@ -20,7 +24,7 @@ xdotool # window control
 wl-clipboard
 
 # theme
-WhiteSur-gtk-theme
+bibata-cursor-theme # cursor theme
 
 # teriminal
 kitty

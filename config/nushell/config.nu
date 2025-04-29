@@ -21,3 +21,6 @@ alias rm = rm -t
 
 # job
 alias fg = do -i { job unfreeze }
+
+# yazi
+alias y = yazi
