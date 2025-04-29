@@ -1,27 +1,13 @@
-let wechat_ids = (xdotool search --class "wechat" | lines)
-if ($wechat_ids | is-empty) {
-    echo "wechat didnot open"
-    /opt/wechat/wechat
-    exit
-}
+# TODO: Poping up wechat if it don't show up in any workspace.
+let wechat_in_special_workspace = hyprctl clients -j | from json | select workspace.name initialClass | where 'workspace.name' == 'special:wechat' and initialClass == 'wechat' | length | $in > 0;
 
-# when wechat exists
-# wechat is hidden in desktop => id0
-# wechat is showing up in desktop => id1
-let id0 = ($wechat_ids | first)
-let id1 = ($wechat_ids | last)
-let wechat_id = if ($id0 | str length) > ($id1 | str length) {
-    $id1
+if $wechat_in_special_workspace {
+  do -i {
+    # This dispatch only contains one window rule, and the rule name should be lowercase.
+    hyprctl dispatch movetoworkspace +0, initialclass:wechat;
+  }
 } else {
-    $id0
-}
-let current_id = (xdotool getwindowfocus)
-
-if ($wechat_id == $current_id) {
-    # wechat was focused, then minimize it.
-    xdotool windowminimize $wechat_id
-} else {
-    # wechat need to be focused
-    xdotool windowactivate $wechat_id
-    xdotool windowraise $wechat_id
+  do -i {
+    hyprctl dispatch movetoworkspacesilent special:wechat, initialclass:wechat;
+  }
 }
