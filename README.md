@@ -3,20 +3,11 @@ hyprland
 hyprpaper
 hypridle
 hyprlock
-xdg-desktop-portal-hyprland 
-qt5-wayland
-qt6-wayland
-hyprpolkitagent
+
 
 # input method
 fcitx5
 fcitx5-chinese-addons
-
-# notify tool
-mako
-
-# menu
-tofi
 
 # shell
 nushell
@@ -27,7 +18,7 @@ dotbot  # dotfile management
 eza     # ls replacement
 zoxide  # cd replacement
 bat     # cat replacement
-ddcutil # brightness controller
+xdotool # window control
 
 # tool
 wl-clipboard
