@@ -24,3 +24,6 @@ alias fg = do -i { job unfreeze }
 
 # yazi
 alias y = yazi
+
+# wechat
+alias wechat = /opt/wechat/wechat
