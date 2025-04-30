@@ -4,10 +4,16 @@ hyprpaper
 hypridle
 hyprlock
 
+# file manager
+nautilus # gnome
+yazie    # tui
 
 # input method
 fcitx5
 fcitx5-chinese-addons
+
+# image viewer
+imv
 
 # shell
 nushell
