@@ -1,5 +1,4 @@
-
-def log [
+export def log [
     message: string,
     --level: string = "info",
     --file: string = "app.log"
