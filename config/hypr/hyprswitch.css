@@ -1,0 +1,46 @@
+@define-color mantle    #181825ee;    
+@define-color crust     #11111bee;    
+@define-color text      #b4befe;    
+@define-color mauve     #cba6f7;    
+@define-color overlay   #181825e0;    
+
+.monitor {
+  background-color: transparent; 
+  border: unset;
+}
+
+.workspace {
+  font-size: 46px;
+  color: @text;
+  font-family: Jetbrains Mono Nerd Font;
+  font-weight: normal;
+  background-color: @overlay;
+  border: unset;
+  border-radius: var(--border-radius);
+}
+
+.client {
+  /* hide the tile */
+  font-size: 0;
+  border: unset;
+  background-color: transparent; /* 半透明背景 */
+}
+
+.client:hover {
+  background-color: @crust;
+}
+
+.client_active {
+  background-color: @crust;
+}
+
+.index {
+  margin: 2px;
+  padding: 2px;
+  font-size: 46px;
+  font-weight: bold;
+  color: @mauve;
+  font-family: Jetbrains Mono Nerd Font;
+  background-color: transparent;
+  border: unset;
+}

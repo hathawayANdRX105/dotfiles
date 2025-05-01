@@ -1,45 +1,48 @@
-# desktop management
+# Desktop Management
 hyprland
 hyprpaper
 hypridle
 hyprlock
+hyprswitch
 
-# file manager
+# File Manager
 nautilus # gnome
-yazie    # tui
+yazi     # tui
 
-# input method
+# Input Method
 fcitx5
 fcitx5-chinese-addons
 
-# key remapping
+# Key Remapping
 keyd
 
-# image viewer
+# Screen Shot
+girmshot
+
+# Image Viewer
 imv
 
-# shell
+# Shell
 nushell
 starship
 
-# cmdline
+# Cmdline
 dotbot  # dotfile management
 eza     # ls replacement
 zoxide  # cd replacement
 bat     # cat replacement
-xdotool # window control
 
-# tool
+# Clipboard Management
 wl-clipboard
 
-# theme
+# Theme
 bibata-cursor-theme # cursor theme
 
-# teriminal
+# Teriminal
 kitty
 
-# app
+# App
 obsidian
 
-# proxy
+# Proxy
 nekoray appimage
