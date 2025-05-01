@@ -13,7 +13,6 @@ zoxide init nushell | save -f ~/.zoxide.nu
 $env.MOZ_ENABLE_WAYLAND = "1"
 
 # fcitx5
-$env.GTK_IM_MODULE = "fcitx"
 $env.QT_IM_MODULE = "fcitx"
 $env.XMODIFIERS = "@im=fcitx"
 
