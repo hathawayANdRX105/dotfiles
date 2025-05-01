@@ -13,4 +13,7 @@
     ~/Pictures/wallpaper:
       glob: true
       path: wallpaper/**
-    /etc/systemd/system/getty@tty1.service.d/override.conf: autologin.conf
+    /etc/systemd/system/getty@tty1.service.d/override.conf: os/systemd/autologin.conf
+    /etc/keyd:
+      glob: true
+      path: os/keyd/**

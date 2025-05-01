@@ -12,6 +12,9 @@ yazie    # tui
 fcitx5
 fcitx5-chinese-addons
 
+# key remapping
+keyd
+
 # image viewer
 imv
 
