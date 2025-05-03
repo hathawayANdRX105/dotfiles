@@ -15,6 +15,7 @@ $env.MOZ_ENABLE_WAYLAND = "1"
 # fcitx5
 $env.QT_IM_MODULE = "fcitx"
 $env.XMODIFIERS = "@im=fcitx"
+$env.GTK_IM_MODULE = "fcitx"
 
 # xdg
 $env.XDG_DESKTOP_DIR     = $"($env.HOME)/Desktop"
