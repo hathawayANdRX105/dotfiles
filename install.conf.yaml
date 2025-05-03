@@ -6,6 +6,9 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.local/bin:
+      glob: true
+      path: bin/**
     ~/.config: 
       glob: true
       path: config/**

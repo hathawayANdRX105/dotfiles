@@ -1,4 +1,5 @@
-source ~/dotfiles/bin/log.nu
+#!/usr/bin/env nu
+# source ~/dotfiles/bin/log.nu
 
 def main [buffer_name: path] {
   if ($env.YAZI_ID | is-empty) {

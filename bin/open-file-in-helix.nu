@@ -1,3 +1,4 @@
+#!/usr/bin/env nu
 # Open default editor to edit file using by yazi.
 
 def is_hx_running [] {

@@ -6,7 +6,7 @@ cursor_blink = true
 
 [opener]
 edit = [
-  { run = 'nu ~/dotfiles/bin/open_file_in_helix.nu "$@"', block = true, for = "unix" },
+  { run = 'open-file-in-helix.nu "$@"', block = true, for = "unix" },
 ]
 extract = [
 	{ run = 'ouch d -y "%*"', desc = "Extract here with ouch", for = "windows" },

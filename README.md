@@ -22,6 +22,9 @@ girmshot
 # Image Viewer
 imv
 
+# Zip Viewer
+ouch
+
 # Shell
 nushell
 starship
@@ -40,6 +43,10 @@ bibata-cursor-theme # cursor theme
 
 # Teriminal
 kitty
+zellij # terminal workspace
+
+# Editor
+helix
 
 # App
 obsidian

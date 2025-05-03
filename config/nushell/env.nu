@@ -1,6 +1,9 @@
 # disable welcome message of nushell
 $env.config.show_banner = false
 
+# # executive bin directory
+$env.PATH = ($env.PATH | append "~/.local/bin")
+
 # editor
 $env.EDITOR      = "helix"
 $env.SUDO_EDITOR = "helix"

@@ -26,7 +26,6 @@ alias cd = z
 
 # ls
 alias l = eza --icons  -a --group-directories-first -1 --long
-# alias ll = eza --icons  -a --group-directories-first -1 --long
 alias lt = eza --icons --tree --group-directories-first
 
 # move file to 'trash' 
