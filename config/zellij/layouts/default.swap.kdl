@@ -1,0 +1,148 @@
+swap_tiled_layout name="one_pane" {
+    ui exact_panes=4 {
+        pane split_direction="vertical" {
+            pane name="sidebar" {
+            	command "env"
+            	args "yazi"
+            	size "20%"
+            }
+            pane 
+        }
+    }
+}
+
+swap_tiled_layout name="sidebar_open_two_or_more_panes" {
+    ui min_panes=5 {
+        pane split_direction="vertical" {
+            pane name="sidebar" {
+                command "env"
+                args "yazi"
+                size "20%"
+            }
+			// helix split inner 
+            pane stacked=true {children;}
+        }
+    }
+}
+
+// use float pane as terminal
+swap_floating_layout name="float_pane_in_center" {
+	ui exact_panes=1 {
+		floating_panes {
+		    pane {
+		    	x "20%"
+		    	y "20%"
+		    	width "60%"
+		    	height "60%"
+		    }
+		}
+	}
+}
+
+swap_floating_layout name="tow_float_panes_in_center" {
+	ui exact_panes=2 {
+		floating_panes {
+		    pane {
+		    	x "20%"
+		    	y "10%"
+		    	width "60%"
+		    	height "40%"
+		    }
+		    pane {
+		    	x "20%"
+		    	y "51%"
+		    	width "60%"
+		    	height "40%"
+		    }
+		}
+	}
+}
+
+swap_floating_layout name="three_float_panes_in_center" {
+	ui exact_panes=3 {
+		floating_panes {
+			pane {
+				x "20%"
+				y "4%"
+				width "60%"
+				height "30%"
+			}
+		    pane {
+		    	x "20%"
+		    	y "35%"
+		    	width "60%"
+		    	height "30%"
+		    }
+		    pane {
+		    	x "20%"
+		    	y "66%"
+		    	width "60%"
+		    	height "30%"
+		    }
+		}
+	}
+}
+
+// x
+// 1 4 4 1
+// 1 4 4 1
+// y
+// 1
+// 4
+// 4
+// 1
+swap_floating_layout name="four_float_panes_in_center" {
+	ui exact_panes=4 {
+		floating_panes {
+		    pane {
+		    	x "10%"
+		    	y "10%"
+		    	width "40%"
+		    	height "40%"
+		    }
+		    pane {
+		    	x "51%"
+		    	y "10%"
+		    	width "40%"
+		    	height "40%"
+		    }
+		    pane {
+		    	x "10%"
+		    	y "51%"
+		    	width "40%"
+		    	height "40%"
+		    }
+			pane {
+		    	x "51%"
+		    	y "51%"
+		    	width "40%"
+		    	height "40%"
+		    }
+		}
+	}
+}
+
+swap_floating_layout name="maximize_float_pane" {
+	ui exact_panes=1 {
+		floating_panes {
+		    pane {
+		    	x "5%"
+		    	y "5%"
+		    	width "90%"
+		    	height "90%"
+		    }
+		}
+	}
+}
+
+swap_floating_layout name="droppop_float_pane" {
+	ui exact_panes=1 {
+		floating_panes {
+		    pane {
+		    	y "70%"
+		    	width "100%"
+		    	height "30%"
+		    }
+		}
+	}
+}

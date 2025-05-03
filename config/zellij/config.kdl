@@ -1,0 +1,299 @@
+default_shell "nu"
+default_mode "locked"
+default_layout "default"
+// simplified_ui true
+
+show_startup_tips false
+show_release_notes false
+
+scrollback_editor "hx"
+
+copy_command "wl-copy"
+copy_clipboard "primary"
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
+
+keybinds {
+    locked {
+        // create or close
+        bind "Alt m" { ToggleFloatingPanes; }
+        bind "Alt n" { NewPane; }
+        bind "Alt x" { CloseFocus; }
+
+        // movement
+        bind "Alt h" "Alt Left"  { MoveFocusOrTab "Left"; }
+        bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
+        bind "Alt j" "Alt Down"  { MoveFocus "Down"; }
+        bind "Alt k" "Alt Up"    { MoveFocus "Up"; }
+
+        bind "Alt [" { GoToPreviousTab; }
+        bind "Alt ]" { GoToNextTab; }
+
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Ctrl Tab" { ToggleTab; }
+        
+
+        // resize or change layout
+        bind "Alt =" { Resize "Increase"; }
+        bind "Alt -" { Resize "Decrease"; }
+        bind "Alt 9" { PreviousSwapLayout; }
+        bind "Alt 0" { NextSwapLayout; }
+        bind "Alt Ctrl h" "Alt Ctrl Left"  { Resize "Increase Left"; }
+        bind "Alt Ctrl j" "Alt Ctrl Down"  { Resize "Increase Down"; }
+        bind "Alt Ctrl k" "Alt Ctrl Up"    { Resize "Increase Up"; }
+        bind "Alt Ctrl l" "Alt Ctrl Right" { Resize "Increase Right"; }
+        bind "Alt F11" { ToggleFocusFullscreen;  }
+
+        // adjust position
+        bind "Alt Shift h" "Alt Shift Left"  { MovePane "Left"; }
+        bind "Alt Shift j" "Alt Shift Down"  { MovePane "Down"; }
+        bind "Alt Shift k" "Alt Shift Up"    { MovePane "Up"; }
+        bind "Alt Shift l" "Alt Shift Right" { MovePane "Right"; }
+
+        // scroll
+        bind "Alt j" "Ctrl Down" { ScrollDown; }
+        bind "Alt k" "Ctrl Up"   { ScrollUp; }
+        bind "PageDown" { PageScrollDown; }
+        bind "PageUp"   { PageScrollUp; }
+        bind "Alt d" { HalfPageScrollDown; }
+        bind "Alt u" { HalfPageScrollUp; }
+
+        // search mode
+        bind "Alt s" { SwitchToMode "EnterSearch"; SearchInput 0; }
+    }
+
+    search {
+        bind "Ctrl s" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "Alt s"  { SwitchToMode "EnterSearch"; SearchInput 0; }
+    }
+
+    shared_except "locked" {
+        // same as "Ctrl g"
+        bind "Ctrl c" { SwitchToMode "Locked"; }
+
+        // create or close
+        bind "Alt m" { ToggleFloatingPanes; }
+        bind "Alt n" { NewPane; }
+        bind "Alt x" { CloseFocus; }
+
+        // movement
+        bind "Alt h" "Alt Left"  { MoveFocusOrTab "Left"; }
+        bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
+        bind "Alt j" "Alt Down"  { MoveFocus "Down"; }
+        bind "Alt k" "Alt Up"    { MoveFocus "Up"; }
+
+        bind "Alt [" { GoToPreviousTab; }
+        bind "Alt ]" { GoToNextTab; }
+
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Ctrl Tab" { ToggleTab; }
+        
+        // resize or change layout
+        bind "Alt =" { Resize "Increase"; }
+        bind "Alt -" { Resize "Decrease"; }
+        bind "Alt 9" { PreviousSwapLayout; }
+        bind "Alt 0" { NextSwapLayout; }
+        bind "Alt Ctrl h" "Alt Ctrl Left"  { Resize "Increase Left"; }
+        bind "Alt Ctrl j" "Alt Ctrl Down"  { Resize "Increase Down"; }
+        bind "Alt Ctrl k" "Alt Ctrl Up"    { Resize "Increase Up"; }
+        bind "Alt Ctrl l" "Alt Ctrl Right" { Resize "Increase Right"; }
+        bind "Alt F11" { ToggleFocusFullscreen; }
+
+        // adjust position
+        bind "Alt Shift h" "Alt Shift Left"  { MovePane "Left"; }
+        bind "Alt Shift j" "Alt Shift Down"  { MovePane "Down"; }
+        bind "Alt Shift k" "Alt Shift Up"    { MovePane "Up"; }
+        bind "Alt Shift l" "Alt Shift Right" { MovePane "Right"; }
+        // bind "Alt i" { MoveTab "Left"; }
+        // bind "Alt o" { MoveTab "Right"; }
+
+        // scroll
+        bind "Alt j" "Ctrl Down" { ScrollDown; }
+        bind "Alt k" "Ctrl Up"   { ScrollUp; }
+        bind "PageDown" { PageScrollDown; }
+        bind "PageUp"   { PageScrollUp; }
+        bind "Alt d" { HalfPageScrollDown; }
+        bind "Alt u" { HalfPageScrollUp; }
+
+        // disabled default keybindings
+        bind "Alt f" { } // float panel
+    }
+}
+
+// Plugin aliases - can be used to change the implementation of Zellij
+// changing these requires a restart to take effect
+plugins {
+    tab-bar location="zellij:tab-bar"
+    status-bar location="zellij:status-bar"
+    strider location="zellij:strider"
+    compact-bar location="zellij:compact-bar"
+    session-manager location="zellij:session-manager"
+    welcome-screen location="zellij:session-manager" {
+        welcome_screen true
+    }
+    filepicker location="zellij:strider" {
+        cwd "/"
+    }
+    configuration location="zellij:configuration"
+    plugin-manager location="zellij:plugin-manager"
+}
+
+// Plugins to load in the background when a new session starts
+load_plugins {
+  // "file:/path/to/my-plugin.wasm"
+  // "https://example.com/my-plugin.wasm"
+}
+
+
+theme "catppuccin-mocha"
+
+themes {
+    catppuccin-mocha {
+        fg 1
+        bg 10
+        black 20
+        red 30
+        green 40
+        yellow 50
+        blue 60
+        magenta 70
+        cyan 80
+        white 90
+        orange 254
+
+        text_unselected {
+            base 205 214 244
+            background 24 24 37
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        text_selected {
+            base 205 214 244
+            background 88 91 112
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        ribbon_selected {
+            base 24 24 37
+            background 166 227 161
+            emphasis_0 243 139 168
+            emphasis_1 250 179 135
+            emphasis_2 245 194 231
+            emphasis_3 137 180 250
+        }
+        ribbon_unselected {
+            base 24 24 37
+            background 205 214 244
+            emphasis_0 243 139 168
+            emphasis_1 205 214 244
+            emphasis_2 137 180 250
+            emphasis_3 245 194 231
+        }
+        table_title {
+            base 166 227 161
+            background 0
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        table_cell_selected {
+            base 205 214 244
+            background 88 91 112
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        table_cell_unselected {
+            base 205 214 244
+            background 24 24 37
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        list_selected {
+            base 205 214 244
+            background 88 91 112
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        list_unselected {
+            base 205 214 244
+            background 24 24 37
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 166 227 161
+            emphasis_3 245 194 231
+        }
+        frame_selected {
+            base 166 227 161
+            background 0
+            emphasis_0 250 179 135
+            emphasis_1 137 220 235
+            emphasis_2 245 194 231
+            emphasis_3 0
+        }
+        frame_highlight {
+            base 250 179 135
+            background 0
+            emphasis_0 250 179 135
+            emphasis_1 250 179 135
+            emphasis_2 250 179 135
+            emphasis_3 250 179 135
+        }
+        exit_code_success {
+            base 166 227 161
+            background 0
+            emphasis_0 137 220 235
+            emphasis_1 24 24 37
+            emphasis_2 245 194 231
+            emphasis_3 137 180 250
+        }
+        exit_code_error {
+            base 243 139 168
+            background 0
+            emphasis_0 249 226 175
+            emphasis_1 0
+            emphasis_2 0
+            emphasis_3 0
+        }
+        multiplayer_user_colors {
+            player_1 245 194 231
+            player_2 137 180 250
+            player_3 0
+            player_4 249 226 175
+            player_5 137 220 235
+            player_6 0
+            player_7 243 139 168
+            player_8 0
+            player_9 0
+            player_10 0
+        }
+    }
+}
