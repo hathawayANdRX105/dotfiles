@@ -4,6 +4,9 @@
       relink: true
 
 - clean: ['~', '~/.config']
+# - clean:
+#     ~/.config:
+#       recursive: true
 
 - link:
     ~/.local/bin:
@@ -13,9 +16,9 @@
       glob: true
       path: config/**
     ~/.gitconfig:
-    ~/Pictures/wallpaper:
+    ~/Pictures/wallpapers:
       glob: true
-      path: wallpaper/**
+      path: wallpapers/**
     /etc/systemd/system/getty@tty1.service.d/override.conf: os/systemd/autologin.conf
     /etc/keyd:
       glob: true
