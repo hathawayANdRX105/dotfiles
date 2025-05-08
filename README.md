@@ -1,13 +1,16 @@
-# Desktop Management
+# Desktop Environment
 hyprland
-hyprpaper
-hypridle
-hyprlock
-hyprswitch
+swww
+
+# Color generation tool
+matugen
+
+# App luancher
+rofi-wayland
 
 # File Manager
-nautilus # gnome
 yazi     # tui
+nautilus # gnome file explorer
 
 # Input Method
 fcitx5
@@ -38,9 +41,6 @@ bat     # cat replacement
 # Clipboard Management
 wl-clipboard
 
-# Theme
-bibata-cursor-theme # cursor theme
-
 # Teriminal
 kitty
 zellij # terminal workspace
@@ -53,3 +53,6 @@ obsidian
 
 # Proxy
 nekoray appimage
+
+# chromium/electron application
+xxx --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime

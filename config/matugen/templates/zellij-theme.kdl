@@ -1,0 +1,132 @@
+themes {
+    matugen-theme {
+        fg {{ colors.surface.default.red }} {{ colors.surface.default.green }} {{ colors.surface.default.blue }}
+        bg {{ colors.background.default.red }} {{ colors.background.default.green }} {{ colors.background.default.blue }} 
+        black {{ colors.black.default.red }} {{ colors.black.default.green }} {{ colors.black.default.blue }}
+        red {{ colors.red.default.red }} {{ colors.red.default.green }} {{ colors.red.default.blue }}
+        green {{ colors.green.default.red }} {{ colors.green.default.green }} {{ colors.green.default.blue }}
+        yellow {{ colors.yellow.default.red }} {{ colors.yellow.default.green}} {{ colors.yellow.default.blue }}
+        blue {{ colors.blue.default.red }} {{ colors.blue.default.green}} {{ colors.blue.default.blue }}
+        magenta {{ colors.magenta.default.red }} {{ colors.magenta.default.green }} {{ colors.magenta.default.blue }}
+        cyan {{ colors.cyan.default.red }} {{ colors.cyan.default.green }} {{ colors.cyan.default.blue }}
+        white {{ colors.white.default.red }} {{ colors.white.default.green }} {{ colors.white.default.blue }}
+        orange {{ colors.orange.default.red }} {{ colors.orange.default.green }} {{ colors.orange.default.blue }}
+
+        text_unselected {
+            base {{ colors.primary.default.red }} {{ colors.primary.default.green }} {{ colors.primary.default.blue }}
+            background {{ colors.background.default.red }} {{ colors.background.default.green }} {{ colors.background.default.blue }}
+            emphasis_0 {{ colors.on_secondary_fixed.default.red }} {{ colors.on_secondary_fixed.default.green }} {{ colors.on_secondary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_secondary_fixed_variant.default.red }} {{ colors.on_secondary_fixed_variant.default.green }} {{ colors.on_secondary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.secondary_fixed_dim.default.red }} {{ colors.secondary_fixed_dim.default.green }} {{ colors.secondary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.secondary_fixed.default.red }} {{ colors.secondary_fixed.default.green }} {{ colors.secondary_fixed.default.blue }}
+        }
+        text_selected {
+            base {{ colors.primary.default.red }} {{ colors.primary.default.green }} {{ colors.primary.default.blue }}
+            background {{ colors.background.default.red }} {{ colors.background.default.green }} {{ colors.background.default.blue }}
+            emphasis_0 {{ colors.on_primary_fixed.default.red }} {{ colors.on_primary_fixed.default.green }} {{ colors.on_primary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_primary_fixed_variant.default.red }} {{ colors.on_primary_fixed_variant.default.green }} {{ colors.on_primary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.primary_fixed_dim.default.red }} {{ colors.primary_fixed_dim.default.green }} {{ colors.primary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.primary_fixed.default.red }} {{ colors.primary_fixed.default.green }} {{ colors.primary_fixed.default.blue }}
+        }
+        ribbon_selected {
+            base {{ colors.surface.default.red }} {{ colors.surface.default.green }} {{ colors.surface.default.blue }}
+            background {{ colors.surface_dim.default.red }} {{ colors.surface_dim.default.green }} {{ colors.surface_dim.default.blue }}
+            emphasis_0 {{ colors.on_secondary_fixed.default.red }} {{ colors.on_secondary_fixed.default.green }} {{ colors.on_secondary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_secondary_fixed_variant.default.red }} {{ colors.on_secondary_fixed_variant.default.green }} {{ colors.on_secondary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.secondary_fixed_dim.default.red }} {{ colors.secondary_fixed_dim.default.green }} {{ colors.secondary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.secondary_fixed.default.red }} {{ colors.secondary_fixed.default.green }} {{ colors.secondary_fixed.default.blue }}
+        }
+        ribbon_unselected {
+            base {{ colors.surface.default.red }} {{ colors.surface.default.green }} {{ colors.surface.default.blue }}
+            background {{ colors.surface_dim.default.red }} {{ colors.surface_dim.default.green }} {{ colors.surface_dim.default.blue }}
+            emphasis_0 {{ colors.on_tertiary_fixed.default.red }} {{ colors.on_tertiary_fixed.default.green }} {{ colors.on_tertiary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_tertiary_fixed_variant.default.red }} {{ colors.on_tertiary_fixed_variant.default.green }} {{ colors.on_tertiary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.tertiary_fixed_dim.default.red }} {{ colors.tertiary_fixed_dim.default.green }} {{ colors.tertiary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.tertiary_fixed.default.red }} {{ colors.tertiary_fixed.default.green }} {{ colors.tertiary_fixed.default.blue }}
+        }
+        table_title {
+            base {{ colors.primary.default.red }} {{ colors.primary.default.green }} {{ colors.primary.default.blue }}
+            background 0
+            emphasis_0 {{ colors.on_primary_fixed.default.red }} {{ colors.on_primary_fixed.default.green }} {{ colors.on_primary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_primary_fixed_variant.default.red }} {{ colors.on_primary_fixed_variant.default.green }} {{ colors.on_primary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.primary_fixed_dim.default.red }} {{ colors.primary_fixed_dim.default.green }} {{ colors.primary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.primary_fixed.default.red }} {{ colors.primary_fixed.default.green }} {{ colors.primary_fixed.default.blue }}
+        }
+        table_cell_selected {
+            base {{ colors.tertiary_container.default.red }} {{ colors.tertiary_container.default.green }} {{ colors.tertiary_container.default.blue }}
+            background {{ colors.tertiary_container.default.red }} {{ colors.tertiary_container.default.green }} {{ colors.tertiary_container.default.blue }}
+            emphasis_0 {{ colors.on_primary_fixed.default.red }} {{ colors.on_primary_fixed.default.green }} {{ colors.on_primary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_primary_fixed_variant.default.red }} {{ colors.on_primary_fixed_variant.default.green }} {{ colors.on_primary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.primary_fixed_dim.default.red }} {{ colors.primary_fixed_dim.default.green }} {{ colors.primary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.primary_fixed.default.red }} {{ colors.primary_fixed.default.green }} {{ colors.primary_fixed.default.blue }}
+        }
+        table_cell_unselected {
+            base {{ colors.tertiary_container.default.red }} {{ colors.tertiary_container.default.green }} {{ colors.tertiary_container.default.blue }}
+            background {{ colors.tertiary_container.default.red }} {{ colors.tertiary_container.default.green }} {{ colors.tertiary_container.default.blue }}
+            emphasis_0 {{ colors.on_secondary_fixed.default.red }} {{ colors.on_secondary_fixed.default.green }} {{ colors.on_secondary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_secondary_fixed_variant.default.red }} {{ colors.on_secondary_fixed_variant.default.green }} {{ colors.on_secondary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.secondary_fixed_dim.default.red }} {{ colors.secondary_fixed_dim.default.green }} {{ colors.secondary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.secondary_fixed.default.red }} {{ colors.secondary_fixed.default.green }} {{ colors.secondary_fixed.default.blue }}
+        }
+        list_selected {
+            base {{ colors.secondary_container.default.red }} {{ colors.secondary_container.default.green }} {{ colors.secondary_container.default.blue }}
+            background {{ colors.secondary_container.default.red }} {{ colors.secondary_container.default.green }} {{ colors.secondary_container.default.blue }}
+            emphasis_0 {{ colors.on_primary_fixed.default.red }} {{ colors.on_primary_fixed.default.green }} {{ colors.on_primary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_primary_fixed_variant.default.red }} {{ colors.on_primary_fixed_variant.default.green }} {{ colors.on_primary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.primary_fixed_dim.default.red }} {{ colors.primary_fixed_dim.default.green }} {{ colors.primary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.primary_fixed.default.red }} {{ colors.primary_fixed.default.green }} {{ colors.primary_fixed.default.blue }}
+        }
+        list_unselected {
+            base {{ colors.secondary_container.default.red }} {{ colors.secondary_container.default.green }} {{ colors.secondary_container.default.blue }}
+            background {{ colors.secondary_container.default.red }} {{ colors.secondary_container.default.green }} {{ colors.secondary_container.default.blue }}
+            emphasis_0 {{ colors.on_secondary_fixed.default.red }} {{ colors.on_secondary_fixed.default.green }} {{ colors.on_secondary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_secondary_fixed_variant.default.red }} {{ colors.on_secondary_fixed_variant.default.green }} {{ colors.on_secondary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.secondary_fixed_dim.default.red }} {{ colors.secondary_fixed_dim.default.green }} {{ colors.secondary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.secondary_fixed.default.red }} {{ colors.secondary_fixed.default.green }} {{ colors.secondary_fixed.default.blue }}
+        }
+        frame_selected {
+            base {{ colors.primary_container.default.red }} {{ colors.primary_container.default.green }} {{ colors.primary_container.default.blue }}
+            background 0
+            emphasis_0 {{ colors.on_primary_fixed.default.red }} {{ colors.on_primary_fixed.default.green }} {{ colors.on_primary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_primary_fixed_variant.default.red }} {{ colors.on_primary_fixed_variant.default.green }} {{ colors.on_primary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.primary_fixed.default.red }} {{ colors.primary_fixed.default.green }} {{ colors.primary_fixed.default.blue }}
+            emphasis_3 0
+        }
+        frame_highlight {
+            base {{ colors.primary_container.default.red }} {{ colors.primary_container.default.green }} {{ colors.primary_container.default.blue }}
+            background 0
+            emphasis_0 {{ colors.on_primary_fixed.default.red }} {{ colors.on_primary_fixed.default.green }} {{ colors.on_primary_fixed.default.blue }}
+            emphasis_1 {{ colors.on_primary_fixed_variant.default.red }} {{ colors.on_primary_fixed_variant.default.green }} {{ colors.on_primary_fixed_variant.default.blue }}
+            emphasis_2 {{ colors.primary_fixed_dim.default.red }} {{ colors.primary_fixed_dim.default.green }} {{ colors.primary_fixed_dim.default.blue }}
+            emphasis_3 {{ colors.primary_fixed.default.red }} {{ colors.primary_fixed.default.green }} {{ colors.primary_fixed.default.blue }}
+        }
+        exit_code_success {
+            base {{ colors.error.default.red }} {{ colors.error.default.green }} {{ colors.error.default.blue }}
+            background 0
+            emphasis_0 137 220 235
+            emphasis_1 24 24 37
+            emphasis_2 245 194 231
+            emphasis_3 137 180 250
+        }
+        exit_code_error {
+            base 243 139 168
+            background 0
+            emphasis_0 {{ colors.red.default.red }} {{ colors.red.default.green }} {{ colors.red.default.blue }}
+            emphasis_1 0
+            emphasis_2 0
+            emphasis_3 0
+        }
+        multiplayer_user_colors {
+            player_1 245 194 231
+            player_2 137 180 250
+            player_3 0
+            player_4 249 226 175
+            player_5 137 220 235
+            player_6 0
+            player_7 243 139 168
+            player_8 0
+            player_9 0
+            player_10 0
+        }
+    }
+}

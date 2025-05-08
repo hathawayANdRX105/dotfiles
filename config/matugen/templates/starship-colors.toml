@@ -1,7 +1,21 @@
+palette = 'colors'
 scan_timeout = 10
 add_newline = false
 format = " $directory$username$character"
 right_format = "$cmd_duration$git_branch$git_metrics$git_commit$git_state$all"
+
+[palettes.colors]
+mustard = '#af8700' # example
+color1 = '{{colors.primary_fixed_dim.default.hex}}'
+color2 = '{{colors.on_primary.default.hex}}'
+color3 = '{{colors.on_surface_variant.default.hex}}'
+color4 = '{{colors.surface_container.default.hex}}'
+color5 = '{{colors.on_primary.default.hex}}'
+color6 = '{{colors.surface_dim.default.hex}}'
+color7 = '{{colors.surface.default.hex}}'
+color8 = '{{colors.primary.default.hex}}'
+color9 = '{{colors.tertiary.default.hex}}'
+
 
 [cmd_duration]
 format = "[$duration](italic dimmed blue) "
@@ -9,8 +23,8 @@ format = "[$duration](italic dimmed blue) "
 [line_break]
 disabled = true
 [character]
-success_symbol = "[λ](green)"
-error_symbol = "[λ](red)"
+success_symbol = "[λ](color9)"
+error_symbol = "[λ](@{error})"
 vimcmd_symbol = "[λ](green)"
 
 [directory]
@@ -22,8 +36,7 @@ style = "cyan"
 tag_symbol = " tag "
 
 [git_branch]
-format = "[$symbol$branch(:$remote_branch)]($style) "
-style = "purple"
+format = "[$symbol](fg:color5)[(fg:color5) $branch(:$remote_branch)](fg:color3) "
 symbol = ""
 
 [git_metrics]
@@ -36,9 +49,8 @@ disabled = true
 
 [time]
 disabled = false
-format = "[$time]($style)"
+format = "[(fg:color5) $time](italic dimmed fg:color3) "
 time_format = "%R"
-style = "italic dimmed white"
 
 [aws]
 symbol = "aws "

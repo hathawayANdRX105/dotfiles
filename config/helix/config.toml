@@ -28,6 +28,7 @@ other-lines = "warning"
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [editor.soft-wrap]
 enable = true

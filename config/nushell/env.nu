@@ -4,10 +4,13 @@ $env.config.show_banner = false
 # # executive bin directory
 $env.PATH = ($env.PATH | append "~/.local/bin")
 
+$env.http_proxy = "http://127.0.0.1:2081"
+$env.https_proxy = "http://127.0.0.1:2081"
+
 # editor
-$env.EDITOR      = "helix"
-$env.SUDO_EDITOR = "helix"
-$env.config.buffer_editor = "helix"
+$env.EDITOR      = "hx"
+$env.SUDO_EDITOR = "hx"
+$env.config.buffer_editor = "hx"
 
 # zoxide
 zoxide init nushell | save -f ~/.zoxide.nu
@@ -18,7 +21,7 @@ $env.MOZ_ENABLE_WAYLAND = "1"
 # fcitx5
 $env.QT_IM_MODULE = "fcitx"
 $env.XMODIFIERS = "@im=fcitx"
-$env.GTK_IM_MODULE = "fcitx"
+# $env.GTK_IM_MODULE = "fcitx" # don't use this for gtk
 
 # xdg
 $env.XDG_DESKTOP_DIR     = $"($env.HOME)/Desktop"

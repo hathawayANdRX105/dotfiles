@@ -40,3 +40,6 @@ alias sy = sudo yazi
 
 # wechat
 alias wechat = /opt/wechat/wechat
+
+source ~/.config/nushell/theme.nu
+

@@ -1,0 +1,20 @@
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server" ]
+auto-format = true
+
+[[language]]
+name = "tsx"
+# language-servers = [ {name = "typescript-language-server", except-features = ["diagnostics"]}]
+language-servers = [ "typescript-language-server"]
+auto-format = true
+
+[[language]]
+name = "json"
+auto-format = true
+
+[[language]]
+name = "css"
+# language-servers = [ "vscode-css-language-server" ]
+auto-format = true
+

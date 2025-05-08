@@ -4,9 +4,9 @@
       relink: true
 
 - clean: ['~', '~/.config']
-# - clean:
-#     ~/.config:
-#       recursive: true
+- clean:
+    ~/.config:
+      recursive: true
 
 - link:
     ~/.local/bin:
