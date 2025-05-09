@@ -122,6 +122,7 @@ p = "paste_primary_clipboard_after"
 y = "yank_to_primary_clipboard"
 P = "paste_primary_clipboard_before"
 R = "replace_selections_with_primary_clipboard"
+"ins" = "paste_primary_clipboard_after"
 
 [keys.normal.space]
 e = ":quit!"

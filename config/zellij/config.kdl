@@ -41,7 +41,9 @@ keybinds {
         bind "Alt 6" { GoToTab 6; }
         bind "Alt 7" { GoToTab 7; }
         bind "Alt 8" { GoToTab 8; }
-        bind "Ctrl Tab" { ToggleTab; }
+        bind "Alt t" { NewTab; }
+        // toggletab doesn't work in locked mode. 
+        // bind "Ctrl Tab" { ToggleTab; }
         
 
         // resize or change layout
@@ -62,8 +64,8 @@ keybinds {
         bind "Alt Shift l" "Alt Shift Right" { MovePane "Right"; }
 
         // scroll
-        bind "Alt j" "Ctrl Down" { ScrollDown; }
-        bind "Alt k" "Ctrl Up"   { ScrollUp; }
+        bind "Ctrl ," "Ctrl Up"   { ScrollUp; }
+        bind "Ctrl ." "Ctrl Down" { ScrollDown; }
         bind "PageDown" { PageScrollDown; }
         bind "PageUp"   { PageScrollUp; }
         bind "Alt d" { HalfPageScrollDown; }
@@ -104,7 +106,9 @@ keybinds {
         bind "Alt 6" { GoToTab 6; }
         bind "Alt 7" { GoToTab 7; }
         bind "Alt 8" { GoToTab 8; }
-        bind "Ctrl Tab" { ToggleTab; }
+        bind "Alt t" { NewTab; }
+        // toggletab doesn't work in locked mode. 
+        // bind "Ctrl Tab" { ToggleTab; }
         
         // resize or change layout
         bind "Alt =" { Resize "Increase"; }
@@ -126,8 +130,8 @@ keybinds {
         // bind "Alt o" { MoveTab "Right"; }
 
         // scroll
-        bind "Alt j" "Ctrl Down" { ScrollDown; }
-        bind "Alt k" "Ctrl Up"   { ScrollUp; }
+        bind "Ctrl Down" { ScrollDown; }
+        bind "Ctrl Up"   { ScrollUp; }
         bind "PageDown" { PageScrollDown; }
         bind "PageUp"   { PageScrollUp; }
         bind "Alt d" { HalfPageScrollDown; }
