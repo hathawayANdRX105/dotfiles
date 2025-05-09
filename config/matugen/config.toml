@@ -79,6 +79,10 @@ output_path = '~/.config/zed/themes/material-you.json'
 input_path = './templates/obsidian.css'
 output_path = '~/novel/.obsidian/snippets/matugen-theme.css'
 
+[templates.sourcegit]
+input_path = './templates/sourcegit-theme.json'
+output_path = '~/.config/SourceGit/matugen-theme.json'
+
 [templates.zen-userchrome]
 input_path = './templates/userChrome.css'
 output_path = '~/.zen/7uv3d8nj.Default (release)/chrome/userChrome.css'
