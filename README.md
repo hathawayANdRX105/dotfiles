@@ -56,3 +56,10 @@ nekoray appimage
 
 # chromium/electron application
 xxx --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime
+
+
+# Chinese Font Configuration
+hanyikongshankai.ttf
+
+archlinux fontconfig: ~/.fonts
+font-cache -r

@@ -16,6 +16,9 @@
       glob: true
       path: config/**
     ~/.gitconfig:
+    ~/.fonts:
+      glob: true
+      path: fonts/**
     ~/Pictures/wallpapers:
       glob: true
       path: wallpapers/**
