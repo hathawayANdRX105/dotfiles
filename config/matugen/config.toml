@@ -16,10 +16,13 @@ arguments = [
 ]
 set = true
 
-[templates.ags]
-input_path = './templates/ags.scss'
-output_path = '~/.config/ags/style/colors.scss'
+# [templates.ags]
+# input_path = './templates/ags.scss'
+# output_path = '~/.config/ags/style/colors.scss'
 
+[templates.hyprland]
+input_path = './templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/config/colors.conf'
 
 [templates.kitty]
 input_path = './templates/kitty-colors.conf'
