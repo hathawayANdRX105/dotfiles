@@ -37,6 +37,7 @@ dotbot  # dotfile management
 eza     # ls replacement
 zoxide  # cd replacement
 bat     # cat replacement
+bluetui # bluetooth tui
 
 # Clipboard Management
 wl-clipboard
