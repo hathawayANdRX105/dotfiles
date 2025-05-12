@@ -2,6 +2,12 @@
 hyprland
 swww
 
+# Programming Language
+rust rust-analyzer
+
+toml taplo
+
+
 # Color generation tool
 matugen
 

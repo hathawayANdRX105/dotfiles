@@ -3,6 +3,7 @@ $env.config.show_banner = false
 
 # # executive bin directory
 $env.PATH = ($env.PATH | append "~/.local/bin")
+$env.PATH = ($env.PATH | append ~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin)
 
 $env.http_proxy = "http://127.0.0.1:2081"
 $env.https_proxy = "http://127.0.0.1:2081"

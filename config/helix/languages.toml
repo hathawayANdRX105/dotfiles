@@ -1,12 +1,14 @@
-[[language]]
-name = "typescript"
-language-servers = [ "typescript-language-server" ]
-auto-format = true
+use-grammars = { only = ["rust", "json", "toml", "css", "lua", "bash"] }
 
 [[language]]
-name = "tsx"
-# language-servers = [ {name = "typescript-language-server", except-features = ["diagnostics"]}]
-language-servers = [ "typescript-language-server"]
+name = "rust"
+auto-format = false
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "toml"
 auto-format = true
 
 [[language]]
@@ -15,6 +17,8 @@ auto-format = true
 
 [[language]]
 name = "css"
-# language-servers = [ "vscode-css-language-server" ]
 auto-format = true
 
+[[language]]
+name = "html"
+auto-format = true
