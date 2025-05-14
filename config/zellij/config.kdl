@@ -10,6 +10,11 @@ scrollback_editor "hx"
 
 copy_command "wl-copy"
 copy_clipboard "primary"
+copy_on_select true
+
+mouse_mode true
+
+pane_frames false
 
 ui {
     pane_frames {
@@ -21,7 +26,7 @@ keybinds {
     locked {
         // create or close
         bind "Alt m" { ToggleFloatingPanes; }
-        bind "Alt n" { NewPane; }
+        bind "Alt c" { NewPane; }
         bind "Alt x" { CloseFocus; }
 
         // movement
@@ -86,7 +91,7 @@ keybinds {
 
         // create or close
         bind "Alt m" { ToggleFloatingPanes; }
-        bind "Alt n" { NewPane; }
+        bind "Alt c" { NewPane; }
         bind "Alt x" { CloseFocus; }
 
         // movement
@@ -162,8 +167,9 @@ plugins {
 
 // Plugins to load in the background when a new session starts
 load_plugins {
-  // "file:/path/to/my-plugin.wasm"
-  // "https://example.com/my-plugin.wasm"
+    // "file:/path/to/my-plugin.wasm"
+    // "https://example.com/my-plugin.wasm"
+    zjpane location="file:~/.config/zellij/plugins/zjpane.wasm"
 }
 
 

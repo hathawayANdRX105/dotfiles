@@ -1,49 +1,33 @@
 #!/usr/bin/env nu
 # Open default editor to edit file using by yazi.
 
-def is_hx_running [] {
+def is_x_running [program: string] {
   # zellij action list-clients can get some info.
   # demo: /etc/profiles/per-user/hathaway/bin/hx --config /home/hathaway/.nixos-config/home/config/helix/config.toml
   let running_command = zellij action list-clients | lines | get 1 | parse -r '\w+\s+\w+\s+(?<RUNNING_COMMAND>.*)' | get RUNNING_COMMAND | to text
 
   let cwd = $running_command | str trim | str downcase | split row ' ' | get 0
 
-  let has_hx = $cwd | str ends-with "/hx"
-  let is_hx = $cwd == "hx"
-  $has_hx or $is_hx
-}
-
-# figure the zellij tab name
-def get_pane_name [working_dir: path] {
-  let git_root = git rev-parse --show-toplevel | str trim
-  # I may use lang:zh...
-  let $is_fatal_root = ($git_root | str starts-with "fatal") or ($git_root | str starts-with "致命错误")
-
-  let pane_name = if ($git_root | is-not-empty) and (not $is_fatal_root) {
-    $git_root | path basename 
-  } else {
-    mut base_name = $working_dir | path basename
-    if ($base_name | is-empty) {
-      $base_name = "unnamed"
-    }
-    $base_name
-  }
-
-  $pane_name
-}
-
-def escape_to_normal_mode [] {
-  zellij action write 27
-}
-
-def execute_cmd [cmd: string] {
-  zellij action write-chars $cmd
-  zellij action write 13
+  let has_x = $cwd | str ends-with $"/($program)"
+  let is_x = $cwd == $program
+  $has_x or $is_x
 }
 
 # Use the 'zellij action write' command to stimulate the keyboard movement.
 # Find BYTES represent meaning in ascii code. 
 # escape(27) enter(13)
+def escape_to_normal_mode [] {
+  zellij action write 27
+}
+
+# Use the 'zellij action write' command to stimulate the keyboard movement.
+# Find BYTES represent meaning in ascii code. 
+# escape(27) enter(13)
+def execute [cmd: string] {
+  zellij action write-chars $cmd
+  zellij action write 13
+}
+
 def open_file_in_exsiting_helix [file_path: path] {
   if not ($file_path | path exists) {
     print $"Error: File path ($file_path) does not exist."
@@ -62,13 +46,13 @@ def open_file_in_exsiting_helix [file_path: path] {
     escape_to_normal_mode
 
     # 2. cd the work directory in command mode
-    execute_cmd $":cd ($working_dir)"
+    execute $":cd ($working_dir)"
 
     # 3. open/edit the specific file in command mode
-    execute_cmd $":open ($file_path)"
+    execute $":open ($file_path)"
 
     # 4. rename the zellij tab
-    zellij action rename-pane "helix"
+    zellij action rename-pane "editor"
   } catch {|err|
     print $"Error executing commands: ($err.msg)"
   }
@@ -93,7 +77,7 @@ def open_file_in_new_helix_pane [file_path: path, yazi_id: string] {
     zellij run --name "helix" --cwd $working_dir -- nu -c $cmd 
 
     # 2. rename pane
-    zellij action rename-pane "helix" 
+    zellij action rename-pane "editor"
   } catch {|err|
     print $"Error executing commands: ($err.msg)"
   }
@@ -128,7 +112,7 @@ def main [file_path: path] {
   }
 
   focus_helix
-  if (is_hx_running) {
+  if (is_x_running "hx") {
     open_file_in_exsiting_helix $file_path
   } else {
     open_file_in_new_helix_pane $file_path $yazi_id
