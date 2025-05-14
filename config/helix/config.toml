@@ -7,7 +7,7 @@ completion-replace = true
 completion-timeout = 150
 completion-trigger-len = 1
 cursorline = true
-end-of-line-diagnostics = "error"
+end-of-line-diagnostics = "disable"
 true-color = true
 
 [editor.auto-save]
@@ -24,11 +24,10 @@ hidden = false
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
-other-lines = "warning"
+other-lines = "disable"
 
 [editor.lsp]
-display-messages = true
-display-inlay-hints = true
+display-inlay-hints = false
 
 [editor.soft-wrap]
 enable = true
@@ -147,4 +146,4 @@ tab = "extend_parent_node_end"
 
 [keys.insert.j]
 k = "normal_mode"
-j= [":insert-output echo 'j'", "move_char_right"]
+j = [":insert-output echo 'j'", "move_char_right"]
