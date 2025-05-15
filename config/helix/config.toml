@@ -87,7 +87,7 @@ S-up = "extend_line_up"
 
 
 [keys.normal]
-A-y = ":sh ~/.local/bin/reveal-in-yazi.nu %{buffer_name}"
+A-y = ":sh ~/.local/bin/reveal-in-yazi-kitty.nu %{buffer_name}"
 
 "A-," = ":buffer-previous"
 "A-." = ":buffer-next"

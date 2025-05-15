@@ -1,16 +1,12 @@
 [manager]
 prepend_keymap = [
-  # bookmark  
-  { on = [ "u", "a" ], run = "plugin yamb save" },
-  { on = [ "u", "g" ], run = "plugin yamb jump_by_key" },
-  { on = [ "u", "G" ], run = "plugin yamb jump_by_fzf" },
-  { on = [ "u", "d" ], run = "plugin yamb delete_by_key" },
-  { on = [ "u", "D" ], run = "plugin yamb delete_by_fzf" },
-  { on = [ "u", "C" ], run = "plugin yamb delete_all" },
-  { on = [ "u", "r" ], run = "plugin yamb rename_by_key" },
-  { on = [ "u", "R" ], run = "plugin yamb rename_by_fzf" },
-  { on = [ "T" ],     run = "plugin toggle-pane min-preview" },
+  # goto
+  { on = ["g", "c"], run = "cd ~/dotfiles" },
+  { on = ["g", "C"], run = "cd ~/.config" },
+  { on = ["g", "r"], run = "cd ~/repo" },
+  { on = ["g", "p"], run = "cd ~/project" },
+  { on = ["g", "n"], run = "cd ~/novel" },
 
-  # edit files or directory with helix
-  { on = [ "e", "c" ], run = "shell 'open-file-in-helix.nu ~/dotfiles'" },
+  # FIX:edit file
+  # { on = ["e", "c"], run = "shell 'open-file-in-helix-kitty.nu ~/dotfiles'" },
 ]

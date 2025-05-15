@@ -6,18 +6,18 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 # Automatically start zellij
-let in_hyprland = ($env | get -i HYPRLAND_INSTANCE_SIGNATURE | is-not-empty)
-let is_zellij_start = 'ZELLIJ' not-in ($env | columns)
-if $in_hyprland and $is_zellij_start {
-  if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
-    zellij attach -c
-  } else {
-    zellij
-  }
-  if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
-    exit
-  }
-}
+# let in_hyprland = ($env | get -i HYPRLAND_INSTANCE_SIGNATURE | is-not-empty)
+# let is_zellij_start = 'ZELLIJ' not-in ($env | columns)
+# if $in_hyprland and $is_zellij_start {
+#   if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
+#     zellij attach -c
+#   } else {
+#     zellij
+#   }
+#   if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
+#     exit
+#   }
+# }
 
 # alias
 alias suhx = sudo hx --config ~/.config/helix/config.toml

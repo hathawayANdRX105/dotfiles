@@ -4,7 +4,7 @@ swww
 
 # Programming Language
 rust rust-analyzer
-
+html/json/css vscode-langservers-extracted
 toml taplo
 
 
@@ -50,7 +50,6 @@ wl-clipboard
 
 # Teriminal
 kitty
-zellij # terminal workspace
 
 # Editor
 helix
